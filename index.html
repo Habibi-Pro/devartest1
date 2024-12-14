@@ -1,69 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>   وبسایت دیوار افغانستان  </title>
-    <link rel="stylesheet" href="style.css">
+    <title>انتخاب ولایت</title>
+    <link rel="stylesheet" href="style.css"> <!-- لینک به فایل CSS -->
 </head>
 <body>
-    <header>
-        <h1> وبسایت دیوار افغانستان </h1>
-    </header>
-    <main>
-        <form>
-            <label for="title">عنوان آگهی:</label>
-            <input type="text" id="title" name="title" required><br><br>
 
-            <label for="description">توضیحات:</label>
-            <textarea id="description" name="description" required></textarea><br><br>
+    <div class="header">
+        <h1>انتخاب ولایت</h1>
+    </div>
 
-            <label for="price">قیمت:</label>
-            <input type="number" id="price" name="price" required><br><br>
+    <div class="container">
+        <label for="province">لطفاً ولایت خود را انتخاب کنید:</label>
+        <select id="province" name="province">
+            <option value="kabul">کابل</option>
+            <option value="herat">هرات</option>
+            <option value="mazar">مزارشریف</option>
+            <option value="kandahar">کندهار</option>
+            <option value="badakhshan">بدخشان</option>
+            <option value="logar">لوگر</option>
+            <!-- می‌توانید ولایت‌های بیشتری اضافه کنید -->
+        </select>
+    </div>
 
-            <label for="provinces">انتخاب ولایت:</label>
-            <select id="provinces" name="provinces">
-                 <option value="badakhshan">عمومی</option>
-                <option value="badakhshan">بدخشان</option>
-                <option value="badghis">بادغیس</option>
-                <option value="baghlan">بغلان</option>
-                <option value="balkh">بلخ</option>
-                <option value="bamyan">بامیان</option>
-                <option value="daykundi">دایکندی</option>
-                <option value="farah">فراه</option>
-                <option value="faryab">فاریاب</option>
-                <option value="ghazni">غزنی</option>
-                <option value="ghor">غور</option>
-                <option value="helmand">هلمند</option>
-                <option value="herat">هرات</option>
-                <option value="jawzjan">جوزجان</option>
-                <option value="kabul">کابل</option>
-                <option value="kandahar">قندهار</option>
-                <option value="kapisa">کاپیسا</option>
-                <option value="khost">خوست</option>
-                <option value="kunar">کنر</option>
-                <option value="kunduz">کندز</option>
-                <option value="laghman">لغمان</option>
-                <option value="logar">لوگر</option>
-                <option value="nangarhar">ننگرهار</option>
-                <option value="nimruz">نیمروز</option>
-                <option value="nuristan">نورستان</option>
-                <option value="panjshir">پنجشیر</option>
-                <option value="parwan">پروان</option>
-                <option value="samangan">سمنگان</option>
-                <option value="sar-e-pol">سرپل</option>
-                <option value="takhar">تخار</option>
-                <option value="urozgan">ارزگان</option>
-                <option value="wardak">وردک</option>
-                <option value="zabul">زابل</option>
-            </select><br><br>
+    <div class="footer">
+        <p>تمامی حقوق محفوظ است &copy; 2024</p>
+    </div>
 
-            <button type="submit">ارسال آگهی</button>
-        </form>
-    </main>
-    <footer>
-        <p>«تمام حقوق محفوظ است»Kihan&copy; 2024</p>
-    </footer>
 </body>
 </html>
