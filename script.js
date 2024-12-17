@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const provinceSelect = document.getElementById("province");
     const districtSelect = document.getElementById("district");
+    const form = document.querySelector("form");
 
     // داده‌های ولسوالی‌ها بر اساس ولایت
     const districts = {
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         zabul: ["قلات", "شینکی", "ارغنداب", "اتغر"],
     };
 
-    // وقتی ولایت تغییر کرد
+    // تغییر لیست ولسوالی‌ها با توجه به ولایت انتخابی
     provinceSelect.addEventListener("change", () => {
         const selectedProvince = provinceSelect.value;
 
@@ -55,6 +56,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 option.textContent = district;
                 districtSelect.appendChild(option);
             });
+        }
+    });
+
+    // تأیید اطلاعات و نمایش پیام
+    form.addEventListener("submit", (e) => {
+        e.preventDefault(); // جلوگیری از ارسال فرم به سرور
+
+        const selectedProvince = provinceSelect.value;
+        const selectedDistrict = districtSelect.value;
+
+        if (selectedProvince === "" || selectedDistrict === "") {
+            alert("لطفاً ولایت و ولسوالی را انتخاب کنید!");
+        } else {
+            alert(
+                `اطلاعات ثبت شد:\nولایت: ${provinceSelect.options[provinceSelect.selectedIndex].text}\nولسوالی: ${districtSelect.options[districtSelect.selectedIndex].text}`
+            );
         }
     });
 });
