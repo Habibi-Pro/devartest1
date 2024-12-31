@@ -21,6 +21,17 @@ document.getElementById('select-all-districts').addEventListener('change', funct
 
 // نمایش ولسوالی‌ها
 function loadDistricts() {
+    // مدیریت انتخاب همه ولسوالی‌ها
+document.getElementById('select-all-districts').addEventListener('change', function () {
+    // وضعیت انتخاب‌شدن چک‌باکس "همه ولسوالی‌ها"
+    const isChecked = this.checked;
+
+    // انتخاب یا لغو انتخاب همه چک‌باکس‌های ولسوالی‌ها
+    const districtsCheckboxes = document.querySelectorAll('#districts-list input[type="checkbox"]');
+    districtsCheckboxes.forEach(checkbox => {
+        checkbox.checked = isChecked;
+    });
+});
     const provinceSelect = document.getElementById("provinceSelect");
     const districtsContainer = document.getElementById("districtsContainer");
     const districtsList = document.getElementById("districtsList");
