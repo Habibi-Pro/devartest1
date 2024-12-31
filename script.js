@@ -1,5 +1,16 @@
 // داده‌های مربوط به ولسوالی‌ها
 const districtsData = {
+    // مدیریت انتخاب همه ولسوالی‌ها
+document.getElementById('select-all-districts').addEventListener('change', function () {
+    // وضعیت انتخاب‌شدن چک‌باکس "همه ولسوالی‌ها"
+    const isChecked = this.checked;
+
+    // انتخاب یا لغو انتخاب همه چک‌باکس‌های ولسوالی‌ها
+    const districtsCheckboxes = document.querySelectorAll('#districts-list input[type="checkbox"]');
+    districtsCheckboxes.forEach(checkbox => {
+        checkbox.checked = isChecked;
+    });
+});
     kabul: ["کابل", "پغمان", "چهار آسیاب", "خاک جبار", "بگرامی", "سروبی", "شکردره", "قره‌باغ", "گل‌دره"],
     herat: ["هرات", "انجیل", "گذره", "ادرسکن", "غوریان", "کرخ", "پشتون زرغون", "اوبه", "کهسان", "زنده جان", "چشت شریف"],
     kandahar: ["قندهار", "پنجوایی", "دامان", "سپین بولدک", "ارغنداب", "ژری", "میوند", "شاه ولی کوت", "معروف"],
