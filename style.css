@@ -1,99 +1,121 @@
+/* استایل اصلی */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Vazir', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
     direction: rtl;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px;
-    text-align: center;
+/* استایل هدر */
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #ff5722;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.search-bar {
+    display: flex;
+    gap: 10px;
 }
 
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: bold;
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
 }
 
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    background: #fff;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: white;
-    background-color: #3498db;
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #ff5722;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    color: #fff;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #2980b9;
+.search-bar button:hover {
+    background-color: #e64a19;
 }
-document.addEventListener("DOMContentLoaded", () => {
-    const provinceSelect = document.getElementById("province");
-    const districtSelect = document.getElementById("district");
-    const form = document.querySelector("form");
 
-    const districts = {
-        badakhshan: ["فیض‌آباد", "شهدا", "بهارک", "ارگو", "شغنان", "واخان", "درواز"],
-        badghis: ["قلعه نو", "آب‌کمری", "بالامرغاب", "مقر", "جوند"],
-        // بقیه ولایات و ولسوالی‌ها...
-    };
+/* استایل دسته‌بندی‌ها */
+.categories {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    provinceSelect.addEventListener("change", () => {
-        const selectedProvince = provinceSelect.value;
-        districtSelect.innerHTML = '<option value="">-- ابتدا ولایت را انتخاب کنید --</option>';
+.categories h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
 
-        if (districts[selectedProvince]) {
-            districts[selectedProvince].forEach((district) => {
-                const option = document.createElement("option");
-                option.value = district;
-                option.textContent = district;
-                districtSelect.appendChild(option);
-            });
-        }
-    });
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // جلوگیری از ارسال فرم به سرور
+.category-list a {
+    text-decoration: none;
+    color: #ff5722;
+    padding: 8px 12px;
+    border: 1px solid #ff5722;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
 
-        const selectedProvince = provinceSelect.value;
-        const selectedDistrict = districtSelect.value;
+.category-list a:hover {
+    background-color: #ff5722;
+    color: #ffffff;
+}
 
-        if (selectedProvince === "" || selectedDistrict === "") {
-            alert("لطفاً ولایت و ولسوالی را انتخاب کنید!");
-        } else {
-            alert(
-                `اطلاعات ثبت شد:\nولایت: ${provinceSelect.options[provinceSelect.selectedIndex].text}\nولسوالی: ${districtSelect.options[districtSelect.selectedIndex].text}`
-            );
-        }
-    });
-});
+/* استایل انتخاب ولایت و شهر */
+.location-selection {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-selection label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.location-selection select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* استایل فوتر */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
