@@ -30,35 +30,24 @@
     <section class="location-selection">
         <h1>انتخاب ولایت و شهر افغانستان</h1>
         <div class="container">
-            <label for="province">لطفاً ولایت خود را انتخاب کنید:</label>
-            <select id="province" name="province" onchange="loadCities()">
-                <option value="kabul">کابل</option>
-                <option value="herat">هرات</option>
-                <option value="mazar">مزارشریف</option>
-                <option value="kandahar">کندهار</option>
-                <option value="badakhshan">بدخشان</option>
-                <option value="logar">لوگر</option>
-                <option value="ghazni">غزنی</option>
-                <option value="takhar">تخار</option>
-                <option value="paktia">پکتیا</option>
-                <option value="balkh">بلخ</option>
-                <option value="kunduz">کندز</option>
-                <option value="paktika">پکتیکا</option>
-                <option value="nimroz">نیمروز</option>
-                <option value="zabul">زابل</option>
-                <option value="daikundi">دایکندی</option>
-                <option value="kunar">کنر</option>
-                <option value="nuristan">نورستان</option>
-                <option value="panjshir">پنجشیر</option>
-                <option value="kapisa">کاپیسا</option>
-                <option value="farah">فراه</option>
-                <option value="ghor">غور</option>
-                <option value="jawzjan">جوزجان</option>
-                <option value="bamiyan">بامیان</option>
-                <option value="sar_e_pol">سرپل</option>
-                <option value="badghis">بادغیس</option>
-            </select>
-
+        <div id="location" class="tab-content active">
+    <h2>انتخاب ولایت و ولسوالی</h2>
+    <div class="province-container">
+        <select id="provinceSelect" onchange="loadDistricts()">
+            <option value="" selected>انتخاب ولایت</option>
+            <option value="kabul">کابل</option>
+            <option value="herat">هرات</option>
+            <option value="kandahar">قندهار</option>
+            <option value="mazar">مزار شریف</option>
+            <option value="takhar">تخار</option>
+            <!-- سایر ولایات -->
+        </select>
+        <div id="districtsContainer" class="districts hidden">
+            <h3>انتخاب ولسوالی‌ها</h3>
+            <div id="districtsList"></div>
+        </div>
+    </div>
+        </div>
             <label for="city">لطفاً شهر خود را انتخاب کنید:</label>
             <select id="city" name="city">
                 <option value="">اول ولایت را انتخاب کنید</option>
