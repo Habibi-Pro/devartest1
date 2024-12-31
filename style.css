@@ -116,6 +116,39 @@ body {
 }
 
 .footer p {
+    margin: 0
+/* استایل انتخاب ولایت و شهر */
+.location-selection {
+    margin: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-selection label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.location-selection select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* استایل فوتر */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer p {
     margin: 0;
     font-size: 14px;
 }
@@ -134,9 +167,36 @@ body {
     font-size: 14px;
     cursor: pointer;
 }
-
-.checkbox-group input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+/* استایل بخش ولایات */
+.province-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e8eaf6;
+    border-radius: 8px;
+    max-width: 400px;
 }
 
+#provinceSelect {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c5cae9;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.districts {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #c5cae9;
+    border-radius: 4px;
+}
+
+.districts.hidden {
+    display: none;
+}
+
+#districtsList label {
+    display: block;
+    margin-bottom: 5px;
+}
