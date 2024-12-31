@@ -49,6 +49,22 @@ body {
 .sidebar ul li a.active {
     background-color: #3949ab;
 }
+#select-all-districts {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#select-all-districts + label {
+    font-weight: bold;
+    color: #004080; /* رنگ آبی تیره */
+}
+
+#districts-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; /* چک‌باکس‌ها به‌صورت عمودی چیده می‌شوند */
+    gap: 5px; /* فاصله بین چک‌باکس‌ها */
+}
 
 /* محتوای اصلی */
 .content {
