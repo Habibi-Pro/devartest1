@@ -3,62 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انتخاب ولایت و شهر</title>
+    <title>بازار آنلاین افغانستان</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>بازار آنلاین آفغانستان</h1>
-        <div class="search-bar">
-            <input type="text" placeholder="جستجوی آگهی...">
-            <button>جستجو</button>
+    <div class="container">
+        <!-- سر برگ ها -->
+        <div class="sidebar">
+            <h2>بازار آنلاین</h2>
+            <ul class="tabs">
+                <li><a href="#" class="tab-link active" onclick="showTab('provinceTab')">انتخاب ولایت</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('categoriesTab')">دسته‌بندی‌ها</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('socialTab')">اجتماعی</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('employmentTab')">استخدام و کاریابی</a></li>
+                <!-- افزودن سر برگ‌های دیگر -->
+            </ul>
         </div>
-    </header>
 
-    <main class="categories">
-        <h2>دسته‌بندی‌ها</h2>
-        <div class="category-list">
-            <a href="category.html">املاک</a>
-            <a href="category.html">وسایل نقلیه</a>
-            <a href="category.html">استخدام و کاریابی</a>
-            <a href="category.html">خدمات</a>
-            <a href="category.html">وسایل شخصی</a>
-            <a href="category.html">سرگرمی و فراغت</a>
-        </div>
-    </main>
+        <!-- محتوا -->
+        <div class="content">
+            <!-- انتخاب ولایت -->
+            <div id="provinceTab" class="tab-content active">
+                <h2>انتخاب ولایت و ولسوالی</h2>
+                <div class="province-container">
+                    <select id="provinceSelect" onchange="loadDistricts()">
+                        <option value="" selected>انتخاب ولایت</option>
+                        <option value="kabul">کابل</option>
+                        <option value="herat">هرات</option>
+                        <option value="kandahar">قندهار</option>
+                        <option value="mazar">مزار شریف</option>
+                        <option value="takhar">تخار</option>
+                        <!-- سایر ولایات -->
+                    </select>
+                    <div id="districtsContainer" class="districts hidden">
+                        <h3>انتخاب ولسوالی‌ها</h3>
+                        <div id="districtsList"></div>
+                    </div>
+                </div>
+            </div>
 
-    <section class="location-selection">
-        <h1>انتخاب ولایت و شهر افغانستان</h1>
-        <div class="container">
-        <div id="location" class="tab-content active">
-    <h2>انتخاب ولایت و ولسوالی</h2>
-    <div class="province-container">
-        <select id="provinceSelect" onchange="loadDistricts()">
-            <option value="" selected>انتخاب ولایت</option>
-            <option value="kabul">کابل</option>
-            <option value="herat">هرات</option>
-            <option value="kandahar">قندهار</option>
-            <option value="mazar">مزار شریف</option>
-            <option value="takhar">تخار</option>
-            <!-- سایر ولایات -->
-        </select>
-        <div id="districtsContainer" class="districts hidden">
-            <h3>انتخاب ولسوالی‌ها</h3>
-            <div id="districtsList"></div>
+            <!-- سایر سر برگ‌ها -->
+            <div id="categoriesTab" class="tab-content">
+                <h2>دسته‌بندی‌ها</h2>
+                <p>این بخش در حال توسعه است.</p>
+            </div>
+            <div id="socialTab" class="tab-content">
+                <h2>اجتماعی</h2>
+                <p>این بخش در حال توسعه است.</p>
+            </div>
+            <div id="employmentTab" class="tab-content">
+                <h2>استخدام و کاریابی</h2>
+                <p>این بخش در حال توسعه است.</p>
+            </div>
         </div>
     </div>
-        </div>
-            <label for="city">لطفاً شهر خود را انتخاب کنید:</label>
-            <select id="city" name="city">
-                <option value="">اول ولایت را انتخاب کنید</option>
-            </select>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>تمامی حقوق محفوظ است &copy; 2024</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
