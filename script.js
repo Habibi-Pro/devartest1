@@ -40,12 +40,27 @@ function loadCities() {
         "nimroz": ["زرنج", "چخانسور", "چاربرجک", "خاشرود", "کنگ"]
     };
 
-    if (cities[province]) {
-        cities[province].forEach(function(city) {
-            var option = document.createElement("option");
-            option.value = city;
-            option.text = city;
-            citySelect.appendChild(option);
+    function loadDistricts() {
+    const provinceSelect = document.getElementById("provinceSelect");
+    const districtsContainer = document.getElementById("districtsContainer");
+    const districtsList = document.getElementById("districtsList");
+
+    const selectedProvince = provinceSelect.value;
+    districtsList.innerHTML = ""; // پاک کردن لیست قبلی
+
+    if (selectedProvince && districtsData[selectedProvince]) {
+        districtsContainer.classList.remove("hidden");
+        districtsData[selectedProvince].forEach((district) => {
+            const label = document.createElement("label");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.value = district;
+
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(" " + district));
+            districtsList.appendChild(label);
         });
+    } else {
+        districtsContainer.classList.add("hidden");
     }
 }
