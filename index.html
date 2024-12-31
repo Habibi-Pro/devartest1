@@ -3,64 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>انتخاب ولایت و ولسوالی</title>
+    <title>انتخاب ولایت و شهر</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>انتخاب ولایت و ولسوالی</h1>
+    <header class="header">
+        <h1>بازار آنلاین آفغانستان</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="جستجوی آگهی...">
+            <button>جستجو</button>
+        </div>
     </header>
-    <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="province">ولایت:</label>
-                <select id="province">
-                    <option value="">-- انتخاب ولایت --</option>
-                    <option value="badakhshan">بدخشان</option>
-                    <option value="badghis">بادغیس</option>
-                    <option value="baghlan">بغلان</option>
-                    <option value="balkh">بلخ</option>
-                    <option value="bamyan">بامیان</option>
-                    <option value="daikundi">دایکندی</option>
-                    <option value="farah">فراه</option>
-                    <option value="faryab">فاریاب</option>
-                    <option value="ghazni">غزنی</option>
-                    <option value="ghor">غور</option>
-                    <option value="helmand">هلمند</option>
-                    <option value="herat">هرات</option>
-                    <option value="jawzjan">جوزجان</option>
-                    <option value="kabul">کابل</option>
-                    <option value="kandahar">قندهار</option>
-                    <option value="kapisa">کاپیسا</option>
-                    <option value="khost">خوست</option>
-                    <option value="kunar">کنر</option>
-                    <option value="kunduz">کندز</option>
-                    <option value="laghman">لغمان</option>
-                    <option value="logar">لوگر</option>
-                    <option value="nangarhar">ننگرهار</option>
-                    <option value="nimroz">نیمروز</option>
-                    <option value="nuristan">نورستان</option>
-                    <option value="paktia">پکتیا</option>
-                    <option value="paktika">پکتیکا</option>
-                    <option value="panjshir">پنجشیر</option>
-                    <option value="parwan">پروان</option>
-                    <option value="samangan">سمنگان</option>
-                    <option value="sar-e-pol">سرپل</option>
-                    <option value="takhar">تخار</option>
-                    <option value="uruzgan">ارزگان</option>
-                    <option value="wardak">وردک</option>
-                    <option value="zabul">زابل</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="district">ولسوالی:</label>
-                <select id="district">
-                    <option value="">-- ابتدا ولایت را انتخاب کنید --</option>
-                </select>
-            </div>
-            <button type="submit">ثبت</button>
-        </form>
-    </div>
-<script src="script.js"></script>
+
+    <main class="categories">
+        <h2>دسته‌بندی‌ها</h2>
+        <div class="category-list">
+            <a href="category.html">املاک</a>
+            <a href="category.html">وسایل نقلیه</a>
+            <a href="category.html">استخدام و کاریابی</a>
+            <a href="category.html">خدمات</a>
+            <a href="category.html">وسایل شخصی</a>
+            <a href="category.html">سرگرمی و فراغت</a>
+        </div>
+    </main>
+
+    <section class="location-selection">
+        <h1>انتخاب ولایت و شهر افغانستان</h1>
+        <div class="container">
+            <label for="province">لطفاً ولایت خود را انتخاب کنید:</label>
+            <select id="province" name="province" onchange="loadCities()">
+                <option value="kabul">کابل</option>
+                <option value="herat">هرات</option>
+                <option value="mazar">مزارشریف</option>
+                <option value="kandahar">کندهار</option>
+                <option value="badakhshan">بدخشان</option>
+                <option value="logar">لوگر</option>
+                <option value="ghazni">غزنی</option>
+                <option value="takhar">تخار</option>
+                <option value="paktia">پکتیا</option>
+                <option value="balkh">بلخ</option>
+                <option value="kunduz">کندز</option>
+                <option value="paktika">پکتیکا</option>
+                <option value="nimroz">نیمروز</option>
+                <option value="zabul">زابل</option>
+                <option value="daikundi">دایکندی</option>
+                <option value="kunar">کنر</option>
+                <option value="nuristan">نورستان</option>
+                <option value="panjshir">پنجشیر</option>
+                <option value="kapisa">کاپیسا</option>
+                <option value="farah">فراه</option>
+                <option value="ghor">غور</option>
+                <option value="jawzjan">جوزجان</option>
+                <option value="bamiyan">بامیان</option>
+                <option value="sar_e_pol">سرپل</option>
+                <option value="badghis">بادغیس</option>
+            </select>
+
+            <label for="city">لطفاً شهر خود را انتخاب کنید:</label>
+            <select id="city" name="city">
+                <option value="">اول ولایت را انتخاب کنید</option>
+            </select>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>تمامی حقوق محفوظ است &copy; 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
