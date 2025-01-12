@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت آگهی</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ثبت آگهی جدید</h1>
+        <nav>
+            <a href="index.html">صفحه اصلی</a>
+        </nav>
+    </header>
+    <main>
+        <form id="post-ad-form">
+            <label for="title">عنوان آگهی:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">توضیحات:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="price">قیمت (افغانی):</label>
+            <input type="number" id="price" name="price" required>
+
+            <label for="province">ولایت:</label>
+            <select id="province" name="province" required>
+                <option value="">انتخاب کنید</option>
+            </select>
+
+            <label for="district">ولسوالی:</label>
+            <select id="district" name="district" required>
+                <option value="">انتخاب کنید</option>
+            </select>
+
+            <button type="submit">ثبت آگهی</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 بازار آنلاین</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
