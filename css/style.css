@@ -1,23 +1,19 @@
-/* متغیرهای عمومی */
+/* استایل‌های عمومی */
 :root {
     --primary-color: #007bff;
     --primary-hover-color: #0056b3;
-    --background-color: #f9f9f9;
-    --text-color: #333;
     --footer-color: #333;
     --footer-text-color: #fff;
-    --form-bg-color: #fff;
     --form-border-color: #ccc;
 }
 
-/* استایل‌های عمومی */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 /* استایل برای هدر */
@@ -34,16 +30,31 @@ header h1 {
 
 header nav {
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
-header nav a {
+header nav input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid var(--form-border-color);
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+}
+
+header nav button {
+    background-color: var(--primary-color);
     color: white;
-    text-decoration: none;
-    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+header nav button:hover {
+    background-color: var(--primary-hover-color);
 }
 
 /* استایل برای دسته‌بندی‌ها */
@@ -51,6 +62,7 @@ header nav a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
     padding: 1rem;
 }
 
@@ -59,7 +71,6 @@ header nav a:hover {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    margin: 0.5rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -72,7 +83,7 @@ header nav a:hover {
 form {
     max-width: 400px;
     margin: 2rem auto;
-    background: var(--form-bg-color);
+    background: white;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -102,7 +113,6 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 form button:hover {
@@ -116,4 +126,24 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: var(--primary-hover-color);
 }
