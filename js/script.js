@@ -31,3 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// انتخاب دکمه همبرگر و منو
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// افزودن عملکرد برای باز و بسته کردن منو
+hamburger.addEventListener('click', () => {
+    // اگر منو مخفی است، نمایش داده شود و برعکس
+    menu.classList.toggle('active'); 
+    // کلاس active را به منو اضافه یا حذف می‌کند
+});
