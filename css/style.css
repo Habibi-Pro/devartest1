@@ -57,7 +57,16 @@ header nav button:hover {
     background-color: var(--primary-hover-color);
 }
 
+
 /* استایل برای دسته‌بندی‌ها */
+/* استایل برای عنوان دسته‌بندی‌ها */
+main h2 {
+    text-align: center; /* متن در مرکز */
+    font-size: 1.8rem; /* اندازه متن */
+    font-weight: bold; /* ضخامت متن */
+    margin-bottom: 1rem; /* فاصله از پایین */
+    color: var(--primary-color); /* رنگ اصلی */
+}
 .categories {
     display: flex;
     justify-content: center;
