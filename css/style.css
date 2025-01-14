@@ -56,6 +56,23 @@ header nav button {
 header nav button:hover {
     background-color: var(--primary-hover-color);
 }
+/* مخفی کردن منو در حالت پیش‌فرض */
+#menu {
+    display: none; /* منو مخفی می‌شود */
+}
+
+/* استایل دکمه همبرگر */
+#hamburger {
+    font-size: 1.5rem; /* اندازه آیکون */
+    background: none; /* پس‌زمینه ندارد */
+    border: none; /* بدون حاشیه */
+    cursor: pointer; /* اشاره‌گر روی دکمه */
+}
+
+/* زمانی که کلاس active به منو اضافه شود، منو نمایش داده می‌شود */
+#menu.active {
+    display: block; /* منو نشان داده می‌شود */
+}
 
 
 /* استایل برای دسته‌بندی‌ها */
