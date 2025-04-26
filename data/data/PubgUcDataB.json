@@ -1,0 +1,39 @@
+{
+  "name": "ریدیم کد پابجی",
+  "fields": [
+    {
+      "name": "کد ریدیم",
+      "type": "text"
+    },
+    {
+      "name": "مقدار یوسی",
+      "type": "number"
+    },
+    {
+      "name": "تاریخ ثبت",
+      "type": "datetime",
+      "default": "now"
+    },
+    {
+      "name": "تاریخ برداشت",
+      "type": "datetime"
+    },
+    {
+      "name": "مدل گوشی",
+      "type": "text"
+    },
+    {
+      "name": "وضعیت استفاده",
+      "type": "text",
+      "choices": ["استفاده نشده", "استفاده شده"]
+    },
+    {
+      "name": "آیدی پابجی",
+      "type": "text"
+    },
+    {
+      "name": "اسم بازیکن",
+      "type": "text"
+    }
+  ]
+}
